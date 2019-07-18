@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.evchumichev.calculator.service.SimpleParserTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-07-18T14:10:28" hostname="eugene-P85-D3" time="0.007">
+  <properties/>
+  <testcase name="shouldCorrectlyParseStringSingleNegativeNumber" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.003"/>
+  <testcase name="shouldCorrectlyParseStringSimpleDifference" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringSimpleMultiply" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseDifferenceCharacterInTheEnd" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.001"/>
+  <testcase name="shouldCorrectlyParseStringNegativeNumber" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringSimpleSum" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringDoubleCharacter" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringDoubleNegativeCharacter" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringPlusNumber" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringTripleSum" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringDoubleMultiplyCharacter" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.001"/>
+  <testcase name="shouldCorrectlyParseStringSingleNumber" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <testcase name="shouldCorrectlyParseStringSimpleDivision" classname="com.github.evchumichev.calculator.service.SimpleParserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
