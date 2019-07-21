@@ -3,22 +3,25 @@ package com.github.evchumichev.calculator.service;
 import com.github.evchumichev.calculator.domain.InputNumber;
 import com.github.evchumichev.calculator.domain.InputPart;
 import com.github.evchumichev.calculator.operations.*;
+import com.google.common.collect.ImmutableMap;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SimpleParser implements Parser {
     @Override
     public List<InputPart> parse(String s) {
+        Map<String, Operation> operations = ImmutableMap.<String, Operation>builder()
+                .put("+", new Sum())
+                .put("-", new Difference())
+                .put("*", new Multiply())
+                .put("/", new Division())
+                .put("sqrt", new SquareRoot())
+                .put("^", new Power())
+                .build();
 
         List<InputPart> parts = new ArrayList<>();
-        HashMap<String, TwoParamOperation> operations = new HashMap<>();
-        operations.put("+", new Sum());
-        operations.put("-", new Difference());
-        operations.put("*", new Multiply());
-        operations.put("/", new Division());
-
         int startIndex = 0;
         boolean isNumber = false;
 
@@ -26,6 +29,7 @@ public class SimpleParser implements Parser {
             char c = s.charAt(i);
 
             if (c >= '0' && c <= '9') {
+
                 if (isNumber)
                     continue;
                 startIndex = i;

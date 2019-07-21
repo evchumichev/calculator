@@ -1,13 +1,13 @@
 package com.github.evchumichev.calculator.operations;
 
-public class Multiply extends TwoParamOperation {
+public class Power extends TwoParamOperation{
     @Override
     public double apply(double x, double y) {
-        return x * y;
+        return Math.pow(x, y);
     }
 
     @Override
     public int getPriority() {
-        return 2;
+        return 3;
     }
 }
