@@ -18,7 +18,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(1.1));
         arrayList.add(new Sum());
         arrayList.add(new InputNumber(2));
-        assertEquals(3.1, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(3.1, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(2.1));
         arrayList.add(new Difference());
         arrayList.add(new InputNumber(2));
-        assertEquals(0.1, evaluationService.evaluate(arrayList), 0.000000000000001);
+        assertEquals(0.1, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(4));
         arrayList.add(new Division());
         arrayList.add(new InputNumber(2));
-        assertEquals(2, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(2, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(1));
         arrayList.add(new Multiply());
         arrayList.add(new InputNumber(2));
-        assertEquals(2, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(2, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(2));
         arrayList.add(new Power());
         arrayList.add(new InputNumber(2));
-        assertEquals(4, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(4, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(2));
         arrayList.add(new Power());
         arrayList.add(new InputNumber(-2));
-        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(-2));
         arrayList.add(new Power());
         arrayList.add(new InputNumber(2));
-        assertEquals(4, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(4, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -88,7 +88,7 @@ public class EvaluationServiceTest {
         arrayList.add(new InputNumber(-2));
         arrayList.add(new Power());
         arrayList.add(new InputNumber(-2));
-        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
@@ -97,17 +97,84 @@ public class EvaluationServiceTest {
         ArrayList<InputPart> arrayList = new ArrayList<>();
         arrayList.add(new SquareRoot());
         arrayList.add(new InputNumber(2));
-        assertEquals(1.4142135623730951, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        assertEquals(1.4142135623730951, evaluationService.evaluate(arrayList), 0.01);
     }
 
     @Test
-    public void shouldCorrectlySquareRootNegativeNumber() {
+    public void shouldCorrectlySumAndDivision() {
         EvaluationService evaluationService = new EvaluationService();
         ArrayList<InputPart> arrayList = new ArrayList<>();
-        arrayList.add(new SquareRoot());
-        arrayList.add(new InputNumber(-2));
-        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Difference());
+        arrayList.add(new InputNumber(1));
+        assertEquals(4, evaluationService.evaluate(arrayList), 0.01);
     }
+
+    @Test
+    public void shouldCorrectlySumAndDivisionNegativeNumber() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(-2));
+        arrayList.add(new Difference());
+        arrayList.add(new InputNumber(1));
+        assertEquals(0, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlySumAndMultiply() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(2));
+        assertEquals(7, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlyDifferenseAndDivisionNegativeNumber() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(-4));
+        arrayList.add(new Difference());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Division());
+        arrayList.add(new InputNumber(2));
+        assertEquals(-5, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlyPowerAndDivisionAndSquareRootAndSumAndDifferenceAndMultiplyNegativeNumber() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Power());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Division());
+        arrayList.add(new SquareRoot());
+        arrayList.add(new InputNumber(8));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(4));
+        arrayList.add(new Difference());
+        arrayList.add(new InputNumber(1));
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(-1));
+        assertEquals(7.828427125, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+//    @Test
+//    public void shouldCorrectlySquareRootNegativeNumber() {
+//        EvaluationService evaluationService = new EvaluationService();
+//        ArrayList<InputPart> arrayList = new ArrayList<>();
+//        arrayList.add(new SquareRoot());
+//        arrayList.add(new InputNumber(-2));
+//        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
+//    }
 
 //    @Test
 //    public void shouldCorrectlyNegativeNumberExponentNegativeNumber() {

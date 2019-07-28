@@ -15,7 +15,7 @@ public class EvaluationService {
             int priority = 0;
             for (int i = 0; i < parts.size(); i++) {
                 if (parts.get(i) instanceof Operation ) {
-                    if (((Operation) parts.get(i)).getPriority() > priority) {
+                    if (((Operation) parts.get(i)).getPriority() >= priority) {
                         position = i;
                         priority = ((Operation) parts.get(i)).getPriority();
                     }
