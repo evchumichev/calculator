@@ -1,4 +1,4 @@
 package com.github.evchumichev.calculator.domain;
 
-public interface Parenthesis {
+public interface Parenthesis extends InputPart {
 }

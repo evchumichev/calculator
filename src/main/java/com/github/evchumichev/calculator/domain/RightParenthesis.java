@@ -1,4 +1,4 @@
-package com.github.evchumichev.calculator.operations;
+package com.github.evchumichev.calculator.domain;
 
-public class RightParenthesis {
+public class RightParenthesis implements Parenthesis {
 }

@@ -2,6 +2,8 @@ package com.github.evchumichev.calculator.service;
 
 import com.github.evchumichev.calculator.domain.InputNumber;
 import com.github.evchumichev.calculator.domain.InputPart;
+import com.github.evchumichev.calculator.domain.LeftParenthesis;
+import com.github.evchumichev.calculator.domain.RightParenthesis;
 import com.github.evchumichev.calculator.operations.*;
 import org.junit.Test;
 
@@ -167,14 +169,70 @@ public class EvaluationServiceTest {
         assertEquals(7.828427125, evaluationService.evaluate(arrayList), 0.01);
     }
 
-//    @Test
-//    public void shouldCorrectlySquareRootNegativeNumber() {
-//        EvaluationService evaluationService = new EvaluationService();
-//        ArrayList<InputPart> arrayList = new ArrayList<>();
-//        arrayList.add(new SquareRoot());
-//        arrayList.add(new InputNumber(-2));
-//        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
-//    }
+    @Test
+    public void shouldCorrectlySumAndMultiplyWithParenthesis() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(2));
+        assertEquals(10, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlySumAndMultiplyWithParenthesisOver() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        assertEquals(7, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlySumAndMultiplyWithMultipleParenthesis() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        assertEquals(10, evaluationService.evaluate(arrayList), 0.01);
+    }
+
+    @Test
+    public void shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new Multiply());
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new RightParenthesis());
+        assertEquals(10, evaluationService.evaluate(arrayList), 0.01);
+    }
+
 
 //    @Test
 //    public void shouldCorrectlyNegativeNumberExponentNegativeNumber() {

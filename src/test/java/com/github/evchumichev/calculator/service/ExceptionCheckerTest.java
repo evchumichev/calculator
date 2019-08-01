@@ -159,4 +159,6 @@ public class ExceptionCheckerTest {
             arrayList.add(new InputNumber(2));
             exceptionChecker.apply(arrayList);
     }
+
+
 }

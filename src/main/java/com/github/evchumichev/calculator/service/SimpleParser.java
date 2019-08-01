@@ -30,7 +30,7 @@ public class SimpleParser implements Parser {
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (c >= '0' && c <= '9') {
+            if (c >= '0' && c <= '9' || c == '.') {
                 if (isOperation) {
                     if (!(operations.containsKey(s.substring(startIndex, i))))
                         throw new RuntimeException("Incorrect format of input function!");
