@@ -1,7 +1,6 @@
 package com.github.evchumichev.calculator.service;
 
-import com.github.evchumichev.calculator.domain.InputNumber;
-import com.github.evchumichev.calculator.domain.InputPart;
+import com.github.evchumichev.calculator.domain.*;
 import com.github.evchumichev.calculator.operations.*;
 import com.google.common.collect.ImmutableMap;
 
@@ -20,73 +19,70 @@ public class SimpleParser implements Parser {
                 .put("^", new Power())
                 .build();
 
+        ImmutableMap<String, Parenthesis> parenthesis = ImmutableMap.<String, Parenthesis>builder()
+                .put("(", new LeftParenthesis())
+                .put(")", new RightParenthesis())
+                .build();
         List<InputPart> parts = new ArrayList<>();
         int startIndex = 0;
         boolean isNumber = false;
         boolean isOperation = false;
-        boolean isNegative = false;
 
         s = s.replaceAll(" ", "");
 
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c >= '0' && c <= '9' || c == '.') {
-                if (isOperation) {
-                    if (!(operations.containsKey(s.substring(startIndex, i))))
-                        throw new RuntimeException("Incorrect format of input function!");
-                    parts.add(operations.get(s.substring(startIndex, i)));
-                    startIndex = i;
-                    isOperation = false;
+            char currentIndexCharacter = s.charAt(i);
+            if (currentIndexCharacter == '-' && s.length() - 1 > 1) {
+                if ((i == 0 || (!parts.isEmpty() && (parts.get(parts.size() - 1)) instanceof Operation)) && (s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9')) {
                     isNumber = true;
                     continue;
                 }
-                if (isNegative) {
-                    isNumber = true;
-                    isNegative = false;
-                }
-                if (isNumber)
+                if ((i == 0 || (!parts.isEmpty() && (parts.get(parts.size() - 1)) instanceof TwoParamOperation) && (!operations.containsKey(String.valueOf(s.charAt(i + 1))) && String.valueOf(s.charAt(i + 1)) == "("))) {
+                    parts.add(new InputNumber(-1));
+                    parts.add(new Multiply());
                     continue;
-                startIndex = i;
-                isNumber = true;
-                continue;
+                }
             }
-
-            if (!(c >= '0' && c <= '9')) {
-                if ((c == '-' && i == 0) || (c == '-' && !(s.charAt(i - 1) >= '0' && s.charAt(i - 1) <= '9'))) {
-                    if (isOperation) {
-                        if (!(operations.containsKey(s.substring(startIndex, i))))
-                            throw new RuntimeException("Incorrect format of input function!");
-                        parts.add(operations.get(s.substring(startIndex, i)));
-                        isOperation = false;
-                    }
-                    startIndex = i;
-                    isNumber = true;
-                    continue;
-                }
+            if (parenthesis.containsKey(String.valueOf(currentIndexCharacter))) {
                 if (isNumber) {
                     parts.add(new InputNumber(Double.parseDouble(s.substring(startIndex, i))));
                     isNumber = false;
                 }
-                if (isOperation && !operations.containsKey(s.substring(startIndex, i)))
-                    continue;
-                if (isOperation && operations.containsKey(s.substring(startIndex, i))) {
+                if (isOperation) {
                     parts.add(operations.get(s.substring(startIndex, i)));
+                    isOperation = false;
                 }
-                isOperation = true;
-                startIndex = i;
-
+                parts.add(parenthesis.get(String.valueOf(currentIndexCharacter)));
+                continue;
             }
-
-
+            if (currentIndexCharacter >= '0' && currentIndexCharacter <= '9') {
+                if (isNumber)
+                    continue;
+                if (isOperation) {
+                    parts.add(operations.get(s.substring(startIndex, i)));
+                    isOperation = false;
+                }
+                isNumber = true;
+                startIndex = i;
+                continue;
+            }
+            if (isNumber) {
+                parts.add(new InputNumber(Double.parseDouble(s.substring(startIndex, i))));
+                isNumber = false;
+            }
+            if (isOperation) {
+                if (!(operations.containsKey(s.substring(startIndex, i)))) {
+                    continue;
+                }
+                parts.add(operations.get(s.substring(startIndex, i)));
+            }
+            isOperation = true;
+            startIndex = i;
         }
+        if (isOperation)
+            throw new RuntimeException("Your input is incorrect!");
         if (isNumber)
             parts.add(new InputNumber(Double.parseDouble(s.substring(startIndex))));
-        if (isOperation) {
-            if (!(operations.containsKey(s.substring(startIndex))))
-                throw new RuntimeException("Incorrect format of input function!");
-            parts.add(operations.get(s.substring(startIndex)));
-        }
-
         return parts;
     }
 }

@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16b31765-3aed-4e92-bc15-d6892f0c2f27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ExceptionCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ExceptionCheckerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/SimpleParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/SimpleParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/SimpleParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/SimpleParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.github.evchumichev.calculator.service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.github.evchumichev.calculator.service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/SimpleParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/SimpleParserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,13 +109,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ParenthesisMultiplyAppenderTest.shouldAppendLeftAndRightParenthesis">
-    <configuration name="EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SimpleParserTest.shouldCorrectlyParseDifferenceCharacterInTheEnd">
+    <configuration name="SimpleParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.SimpleParserTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -116,12 +130,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesis" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimpleParserTest.shouldCorrectlyParseDifferenceCharacterBeforeParenthesis" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesis&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.SimpleParserTest.shouldCorrectlyParseDifferenceCharacterBeforeParenthesis&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -136,12 +150,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesisOver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimpleParserTest.shouldCorrectlyParseDifferenceCharacterInTheEnd" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesisOver&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.SimpleParserTest.shouldCorrectlyParseDifferenceCharacterInTheEnd&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -156,12 +170,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParenthesisMultiplyAppenderTest.shouldAppendLeftAndRightParenthesis" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimpleParserTest.shouldCorrectlyParseStringDifferenceAndOperation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.ParenthesisMultiplyAppenderTest.shouldAppendLeftAndRightParenthesis&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.SimpleParserTest.shouldCorrectlyParseStringDifferenceAndOperation&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -176,12 +190,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParenthesisMultiplyAppenderTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimpleParserTest.shouldCorrectlyParseStringSimpleSum" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.ParenthesisMultiplyAppenderTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.github.evchumichev.calculator.service.SimpleParserTest.shouldCorrectlyParseStringSimpleSum&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -198,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParenthesisMultiplyAppenderTest.shouldAppendLeftAndRightParenthesis" />
-        <item itemvalue="Gradle.ParenthesisMultiplyAppenderTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver" />
-        <item itemvalue="Gradle.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithMultipleParenthesisOver" />
-        <item itemvalue="Gradle.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesisOver" />
-        <item itemvalue="Gradle.EvaluationServiceTest.shouldCorrectlySumAndMultiplyWithParenthesis" />
+        <item itemvalue="Gradle.SimpleParserTest.shouldCorrectlyParseDifferenceCharacterInTheEnd" />
+        <item itemvalue="Gradle.SimpleParserTest" />
+        <item itemvalue="Gradle.SimpleParserTest.shouldCorrectlyParseDifferenceCharacterBeforeParenthesis" />
+        <item itemvalue="Gradle.SimpleParserTest.shouldCorrectlyParseStringSimpleSum" />
+        <item itemvalue="Gradle.SimpleParserTest.shouldCorrectlyParseStringDifferenceAndOperation" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +272,7 @@
       <workItem from="1564658470229" duration="16702000" />
       <workItem from="1564675282671" duration="19000" />
       <workItem from="1564739546053" duration="2580000" />
-      <workItem from="1564747486008" duration="2685000" />
+      <workItem from="1564747486008" duration="15583000" />
     </task>
     <task id="LOCAL-00001" summary="New version with new operarions: Power, SquareRoot. Calculator can parse and evaluate multiple operations.">
       <created>1563725346644</created>
@@ -324,93 +338,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>36</line>
+          <line>37</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/SimpleParserTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/EvaluationService.java</url>
@@ -597,6 +551,121 @@
           <line>17</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ExceptionChecker.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ExceptionCheckerTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/EvaluationService.java</url>
           <line>47</line>
@@ -628,14 +697,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppenderTest.java</url>
-          <line>31</line>
-          <properties class="com.github.evchumichev.calculator.service.ParenthesisMultiplyAppenderTest" method="shouldAppendLeftAndRightParenthesis">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

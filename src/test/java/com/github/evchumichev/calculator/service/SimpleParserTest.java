@@ -2,6 +2,8 @@ package com.github.evchumichev.calculator.service;
 
 import com.github.evchumichev.calculator.domain.InputNumber;
 import com.github.evchumichev.calculator.domain.InputPart;
+import com.github.evchumichev.calculator.domain.LeftParenthesis;
+import com.github.evchumichev.calculator.domain.RightParenthesis;
 import com.github.evchumichev.calculator.operations.*;
 import org.junit.Test;
 
@@ -154,12 +156,18 @@ public class SimpleParserTest {
         assertEquals(-34.0, ((InputNumber) parts.get(0)).getNumber(), 0);
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void shouldCorrectlyParseStringDifferenceAndOperation() {
         String s = "-*34";
         Parser parser = new SimpleParser();
-        parser.parse(s);
-        }
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(3, parts.size());
+        assertEquals(34.0, ((InputNumber) parts.get(2)).getNumber(), 0);
+        assertEquals(Difference.class, parts.get(0).getClass());
+        assertEquals(Multiply.class, parts.get(1).getClass());
+    }
 
     @Test
     public void shouldCorrectlyParseSquareRoot() {
@@ -237,16 +245,12 @@ public class SimpleParserTest {
         assertEquals(SquareRoot.class, parts.get(0).getClass());
     }
 
-//    @Test
-//    public void shouldCorrectlyParseMinusCharacter() {
-//        String s = "-";
-//        Parser parser = new SimpleParser();
-//        List<InputPart> parts = parser.parse(s);
-//        assertNotNull(parts);
-//
-//        assertEquals(1, parts.size());
-//        assertEquals(Difference.class, parts.get(0).getClass());
-//    }
+    @Test(expected = RuntimeException.class)
+    public void shouldCorrectlyParseMinusCharacter() {
+        String s = "-";
+        Parser parser = new SimpleParser();
+        parser.parse(s);
+    }
 
     @Test
     public void shouldCorrectlyParseOneParamOperationAfterOneParamOperation() {
@@ -261,18 +265,47 @@ public class SimpleParserTest {
         assertEquals(SquareRoot.class, parts.get(1).getClass());
     }
 
-//    @Test
-//    public void shouldCorrectlyParseMinusCharacterSquareRoot() {
-//        String s = "-sqrt54";
-//        Parser parser = new SimpleParser();
-//        List<InputPart> parts = parser.parse(s);
-//        assertNotNull(parts);
-//
-//        assertEquals(3, parts.size());
-//        assertEquals(54.0, ((InputNumber) parts.get(1)).getNumber(), 0);
-//        assertEquals(SquareRoot.class, parts.get(1).getClass());
-//        assertEquals(Difference.class, parts.get(0).getClass());
-//    }
+    @Test
+    public void shouldCorrectlyParseMinusCharacterSquareRoot() {
+        String s = "-sqrt54";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
 
+        assertEquals(4, parts.size());
+        assertEquals(-1.0, ((InputNumber) parts.get(0)).getNumber(), 0);
+        assertEquals(54.0, ((InputNumber) parts.get(3)).getNumber(), 0);
+        assertEquals(SquareRoot.class, parts.get(2).getClass());
+        assertEquals(Multiply.class, parts.get(1).getClass());
+    }
 
+    @Test
+    public void shouldCorrectlyParseNumberBeforeOneParamOperation() {
+        String s = "-3sqrt54";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(3, parts.size());
+        assertEquals(-3, ((InputNumber) parts.get(0)).getNumber(), 0);
+        assertEquals(54.0, ((InputNumber) parts.get(2)).getNumber(), 0);
+        assertEquals(SquareRoot.class, parts.get(1).getClass());
+    }
+
+    @Test
+    public void shouldCorrectlyParseDifferenceCharacterBeforeParenthesis() {
+        String s = "-(3*2)";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(7, parts.size());
+        assertEquals(-1, ((InputNumber) parts.get(0)).getNumber(), 0);
+        assertEquals(3, ((InputNumber) parts.get(3)).getNumber(), 0);
+        assertEquals(2, ((InputNumber) parts.get(5)).getNumber(), 0);
+        assertEquals(Multiply.class, parts.get(1).getClass());
+        assertEquals(Multiply.class, parts.get(4).getClass());
+        assertEquals(LeftParenthesis.class, parts.get(2).getClass());
+        assertEquals(RightParenthesis.class, parts.get(6).getClass());
+    }
 }
