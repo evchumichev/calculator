@@ -14,7 +14,7 @@ public class ParenthesisMultiplyAppender {
             throw new RuntimeException("Your input function is empty!\nPlease, insert correct input function!");
         for (int i = 0; i < parts.size(); i++) {
             int end = parts.size() - 1;
-            if (parts.get(i) instanceof LeftParenthesis && i > 0 && parts.get(i - 1) instanceof InputNumber) {
+            if (parts.get(i) instanceof LeftParenthesis && i > 0 && (parts.get(i - 1) instanceof InputNumber || parts.get(i - 1) instanceof RightParenthesis)) {
                 parts.add(i++, new Multiply());
                 continue;
             }
