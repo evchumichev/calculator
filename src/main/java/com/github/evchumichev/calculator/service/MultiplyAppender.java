@@ -23,6 +23,7 @@ public class ParenthesisMultiplyAppender {
                 parts.add(++i, new Multiply());
                 continue;
             }
+            if ()
         }
     }
 }
