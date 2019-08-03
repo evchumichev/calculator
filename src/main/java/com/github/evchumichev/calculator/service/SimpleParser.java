@@ -15,8 +15,10 @@ public class SimpleParser implements Parser {
                 .put("-", new Difference())
                 .put("*", new Multiply())
                 .put("/", new Division())
-                .put("sqrt", new SquareRoot())
                 .put("^", new Power())
+                .put("sqrt", new SquareRoot())
+                .put("log", new Logarithm())
+                .put("ln", new NaturalLogarithm())
                 .build();
 
         ImmutableMap<String, Parenthesis> parenthesis = ImmutableMap.<String, Parenthesis>builder()
