@@ -67,4 +67,25 @@ public class ParenthesisMultiplyAppenderTest {
         assertEquals(9, arrayList.size());
         assertEquals(Multiply.class, arrayList.get(4).getClass());
     }
+
+    @Test //2(3+1)sqrtsqrt4
+    public void shouldAppend() {
+        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(1));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new SquareRoot());
+        arrayList.add(new SquareRoot());
+        arrayList.add(new InputNumber(4));
+        parenthesisMultiplyAppender.apply(arrayList);
+        assertNotNull(arrayList);
+
+        assertEquals(11, arrayList.size());
+        assertEquals(Multiply.class, arrayList.get(1).getClass());
+        assertEquals(Multiply.class, arrayList.get(7).getClass());
+    }
 }

@@ -245,11 +245,15 @@ public class SimpleParserTest {
         assertEquals(SquareRoot.class, parts.get(0).getClass());
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void shouldCorrectlyParseMinusCharacter() {
         String s = "-";
         Parser parser = new SimpleParser();
-        parser.parse(s);
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(1, parts.size());
+        assertEquals(Difference.class, parts.get(0).getClass());
     }
 
     @Test
@@ -276,7 +280,7 @@ public class SimpleParserTest {
         assertEquals(-1.0, ((InputNumber) parts.get(0)).getNumber(), 0);
         assertEquals(54.0, ((InputNumber) parts.get(3)).getNumber(), 0);
         assertEquals(SquareRoot.class, parts.get(2).getClass());
-        assertEquals(Multiply.class, parts.get(1).getClass());
+        assertEquals(PriorityMultiply.class, parts.get(1).getClass());
     }
 
     @Test
@@ -303,9 +307,46 @@ public class SimpleParserTest {
         assertEquals(-1, ((InputNumber) parts.get(0)).getNumber(), 0);
         assertEquals(3, ((InputNumber) parts.get(3)).getNumber(), 0);
         assertEquals(2, ((InputNumber) parts.get(5)).getNumber(), 0);
-        assertEquals(Multiply.class, parts.get(1).getClass());
+        assertEquals(PriorityMultiply.class, parts.get(1).getClass());
         assertEquals(Multiply.class, parts.get(4).getClass());
         assertEquals(LeftParenthesis.class, parts.get(2).getClass());
         assertEquals(RightParenthesis.class, parts.get(6).getClass());
+    }
+
+    @Test
+    public void shouldCorrectlyParseNegativeParenthesisAfterOperation() {
+        String s = "sqrt - (2 + 2)";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(8, parts.size());
+        assertEquals(2, ((InputNumber) parts.get(6)).getNumber(), 0);
+        assertEquals(2, ((InputNumber) parts.get(4)).getNumber(), 0);
+        assertEquals(-1, ((InputNumber) parts.get(1)).getNumber(), 0);
+        assertEquals(SquareRoot.class, parts.get(0).getClass());
+        assertEquals(PriorityMultiply.class, parts.get(2).getClass());
+        assertEquals(Sum.class, parts.get(5).getClass());
+        assertEquals(LeftParenthesis.class, parts.get(3).getClass());
+        assertEquals(RightParenthesis.class, parts.get(7).getClass());
+    }
+
+    @Test
+    public void shouldCorrectlyParse() {
+        String s = "2(3+1)sqrtsqrt4";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(9, parts.size());
+        assertEquals(2, ((InputNumber) parts.get(0)).getNumber(), 0);
+        assertEquals(3, ((InputNumber) parts.get(2)).getNumber(), 0);
+        assertEquals(1, ((InputNumber) parts.get(4)).getNumber(), 0);
+        assertEquals(4, ((InputNumber) parts.get(8)).getNumber(), 0);
+        assertEquals(LeftParenthesis.class, parts.get(1).getClass());
+        assertEquals(Sum.class, parts.get(3).getClass());
+        assertEquals(RightParenthesis.class, parts.get(5).getClass());
+        assertEquals(SquareRoot.class, parts.get(6).getClass());
+        assertEquals(SquareRoot.class, parts.get(7).getClass());
     }
 }

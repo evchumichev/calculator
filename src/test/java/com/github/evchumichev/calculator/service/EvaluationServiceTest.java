@@ -250,26 +250,26 @@ public class EvaluationServiceTest {
         assertEquals(10, evaluationService.evaluate(arrayList), 0.01);
     }
 
+    @Test
+    public void shouldCorrectly() {
+        EvaluationService evaluationService = new EvaluationService();
+        ArrayList<InputPart> arrayList = new ArrayList<>();
+        arrayList.add(new InputNumber(2));
+        arrayList.add(new Multiply());
+        arrayList.add(new LeftParenthesis());
+        arrayList.add(new InputNumber(3));
+        arrayList.add(new Sum());
+        arrayList.add(new InputNumber(1));
+        arrayList.add(new RightParenthesis());
+        arrayList.add(new Multiply());
+        arrayList.add(new SquareRoot());
+        arrayList.add(new SquareRoot());
+        arrayList.add(new InputNumber(4));
+        assertEquals(11.313708499, evaluationService.evaluate(arrayList), 0.01);
+    }
 
-//    @Test
-//    public void shouldCorrectlyNegativeNumberExponentNegativeNumber() {
-//        EvaluationService evaluationService = new EvaluationService();
-//        ArrayList<InputPart> arrayList = new ArrayList<>();
-//        arrayList.add(new InputNumber(-2));
-//        arrayList.add(new Power());
-//        arrayList.add(new InputNumber(-2));
-//        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
-//    }
-//
-//    @Test
-//    public void shouldCorrectlyNegativeNumberExponentNegativeNumber() {
-//        EvaluationService evaluationService = new EvaluationService();
-//        ArrayList<InputPart> arrayList = new ArrayList<>();
-//        arrayList.add(new InputNumber(-2));
-//        arrayList.add(new Power());
-//        arrayList.add(new InputNumber(-2));
-//        assertEquals(0.25, evaluationService.evaluate(arrayList), 0.0000000000000001);
-//    }
+
+
 
 
 }

@@ -5,6 +5,7 @@ import com.github.evchumichev.calculator.domain.InputPart;
 import com.github.evchumichev.calculator.domain.LeftParenthesis;
 import com.github.evchumichev.calculator.domain.RightParenthesis;
 import com.github.evchumichev.calculator.operations.Multiply;
+import com.github.evchumichev.calculator.operations.OneParamOperation;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class ParenthesisMultiplyAppender {
                 parts.add(i++, new Multiply());
                 continue;
             }
-            if (parts.get(i) instanceof RightParenthesis && i < end && parts.get(i + 1) instanceof InputNumber) {
+            if (parts.get(i) instanceof RightParenthesis && i < end && ((parts.get(i + 1) instanceof InputNumber) || parts.get(i + 1) instanceof OneParamOperation)) {
                 parts.add(++i, new Multiply());
                 continue;
             }

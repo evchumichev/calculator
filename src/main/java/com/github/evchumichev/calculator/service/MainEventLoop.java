@@ -12,6 +12,7 @@ public class MainEventLoop {
         UserInputGetter userInputGetter = new UserInputGetter();
         Parser parser = new SimpleParser();
         EvaluationService evaluationService = new EvaluationService();
+        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
         ExceptionChecker exceptionChecker = new ExceptionChecker();
         while (true) {
             try {
@@ -19,6 +20,7 @@ public class MainEventLoop {
                 if (inputString.equals("exit"))
                     return;
                 List<InputPart> parts = parser.parse(inputString);
+                parenthesisMultiplyAppender.apply(parts);
                 exceptionChecker.apply(parts);
                 double result = evaluationService.evaluate(parts);
                 System.out.println(result);
