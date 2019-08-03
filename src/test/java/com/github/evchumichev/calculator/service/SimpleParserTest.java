@@ -349,4 +349,30 @@ public class SimpleParserTest {
         assertEquals(SquareRoot.class, parts.get(6).getClass());
         assertEquals(SquareRoot.class, parts.get(7).getClass());
     }
+    @Test
+    public void shouldCorrectlyParseTwo() {
+        String s = "1+3(5-1)+(-3*4)/123";
+        Parser parser = new SimpleParser();
+        List<InputPart> parts = parser.parse(s);
+        assertNotNull(parts);
+
+        assertEquals(16, parts.size());
+        assertEquals(1, ((InputNumber) parts.get(0)).getNumber(), 0);
+        assertEquals(Sum.class, parts.get(1).getClass());
+        assertEquals(3, ((InputNumber) parts.get(2)).getNumber(), 0);
+        assertEquals(LeftParenthesis.class, parts.get(3).getClass());
+        assertEquals(5, ((InputNumber) parts.get(4)).getNumber(), 0);
+        assertEquals(Difference.class, parts.get(5).getClass());
+        assertEquals(1, ((InputNumber) parts.get(6)).getNumber(), 0);
+        assertEquals(RightParenthesis.class, parts.get(7).getClass());
+        assertEquals(Sum.class, parts.get(8).getClass());
+        assertEquals(LeftParenthesis.class, parts.get(9).getClass());
+        assertEquals(-3, ((InputNumber) parts.get(10)).getNumber(), 0);
+        assertEquals(Multiply.class, parts.get(11).getClass());
+        assertEquals(4, ((InputNumber) parts.get(12)).getNumber(), 0);
+        assertEquals(RightParenthesis.class, parts.get(13).getClass());
+        assertEquals(Division.class, parts.get(14).getClass());
+        assertEquals(123, ((InputNumber) parts.get(15)).getNumber(), 0);
+
+    }
 }

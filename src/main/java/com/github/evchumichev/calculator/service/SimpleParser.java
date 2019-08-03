@@ -33,7 +33,7 @@ public class SimpleParser implements Parser {
         for (int i = 0; i < inputString.length(); i++) {
             char currentIndexCharacter = inputString.charAt(i);
             if (currentIndexCharacter == '-' && inputString.length() - 1 > 1) {
-                if ((i == 0 || isOperation) && inputString.charAt(i + 1) >= '0' && inputString.charAt(i + 1) <= '9') {
+                if ((i == 0 || isOperation || (inputString.charAt(i - 1) == '(')) && inputString.charAt(i + 1) >= '0' && inputString.charAt(i + 1) <= '9') {
                     if (isOperation) {
                         if (!operations.containsKey(inputString.substring(startIndex,i)))
                             throw new RuntimeException("Your input is incorrect!");
@@ -44,7 +44,7 @@ public class SimpleParser implements Parser {
                     startIndex = i;
                     continue;
                 }
-                if ((i == 0 || isOperation) && (!(inputString.charAt(i + 1) >= '0' && inputString.charAt(i + 1) <= '9') && !(operations.containsKey(String.valueOf(inputString.charAt(i + 1)))))) {
+                if ((i == 0 || isOperation || (inputString.charAt(i - 1) == '(')) && (!(inputString.charAt(i + 1) >= '0' && inputString.charAt(i + 1) <= '9') && !(operations.containsKey(String.valueOf(inputString.charAt(i + 1)))))) {
                     if (isOperation) {
                         if (!operations.containsKey(inputString.substring(startIndex,i)))
                             throw new RuntimeException("Your input is incorrect!");
