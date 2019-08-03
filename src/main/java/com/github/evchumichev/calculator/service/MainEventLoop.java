@@ -12,7 +12,7 @@ public class MainEventLoop {
         UserInputGetter userInputGetter = new UserInputGetter();
         Parser parser = new SimpleParser();
         EvaluationService evaluationService = new EvaluationService();
-        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        MultiplyAppender parenthesisMultiplyAppender = new MultiplyAppender();
         ExceptionChecker exceptionChecker = new ExceptionChecker();
         while (true) {
             try {

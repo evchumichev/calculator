@@ -2,31 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16b31765-3aed-4e92-bc15-d6892f0c2f27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/MainEventLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/MainEventLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/SimpleParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/evchumichev/calculator/service/SimpleParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/EvaluationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/EvaluationServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/SimpleParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/github/evchumichev/calculator/service/SimpleParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/operations/PriorityMultiply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/operations/PriorityMultiply.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MainEventLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MainEventLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/SimpleParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/EvaluationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/EvaluationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ExceptionCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ExceptionCheckerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppenderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppenderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/SimpleParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/evchumichev/calculator/service/SimpleParserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +260,7 @@
       <workItem from="1564675282671" duration="19000" />
       <workItem from="1564739546053" duration="2580000" />
       <workItem from="1564747486008" duration="15965000" />
-      <workItem from="1564800889117" duration="6389000" />
+      <workItem from="1564800889117" duration="7677000" />
     </task>
     <task id="LOCAL-00001" summary="New version with new operarions: Power, SquareRoot. Calculator can parse and evaluate multiple operations.">
       <created>1563725346644</created>
@@ -523,32 +510,32 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>15</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>17</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>21</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>13</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>22</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/ParenthesisMultiplyAppender.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/evchumichev/calculator/service/MultiplyAppender.java</url>
           <line>18</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>

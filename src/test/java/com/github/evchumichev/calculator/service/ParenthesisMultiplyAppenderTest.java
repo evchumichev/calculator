@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class ParenthesisMultiplyAppenderTest {
     @Test
     public void shouldDoNothing() {
-        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        MultiplyAppender parenthesisMultiplyAppender = new MultiplyAppender();
         ArrayList<InputPart> arrayList = new ArrayList<>();
         arrayList.add(new LeftParenthesis());
         arrayList.add(new InputNumber(1));
@@ -32,7 +32,7 @@ public class ParenthesisMultiplyAppenderTest {
 
     @Test
     public void shouldAppendMultiplyBeforeLeftAndAfterRightParenthesis() {
-        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        MultiplyAppender parenthesisMultiplyAppender = new MultiplyAppender();
         ArrayList<InputPart> arrayList = new ArrayList<>();
         arrayList.add(new InputNumber(1));
         arrayList.add(new LeftParenthesis());
@@ -51,7 +51,7 @@ public class ParenthesisMultiplyAppenderTest {
 
     @Test
     public void shouldAppendMultiplyBetweenRightAndLeftParenthesis() {
-        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        MultiplyAppender parenthesisMultiplyAppender = new MultiplyAppender();
         ArrayList<InputPart> arrayList = new ArrayList<>();
         arrayList.add(new LeftParenthesis());
         arrayList.add(new InputNumber(1));
@@ -70,7 +70,7 @@ public class ParenthesisMultiplyAppenderTest {
 
     @Test //2(3+1)sqrtsqrt4
     public void shouldAppend() {
-        ParenthesisMultiplyAppender parenthesisMultiplyAppender = new ParenthesisMultiplyAppender();
+        MultiplyAppender parenthesisMultiplyAppender = new MultiplyAppender();
         ArrayList<InputPart> arrayList = new ArrayList<>();
         arrayList.add(new InputNumber(2));
         arrayList.add(new LeftParenthesis());

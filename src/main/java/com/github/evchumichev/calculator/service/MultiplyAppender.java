@@ -9,7 +9,7 @@ import com.github.evchumichev.calculator.operations.OneParamOperation;
 
 import java.util.List;
 
-public class ParenthesisMultiplyAppender {
+public class MultiplyAppender {
     public void apply(List<InputPart> parts) {
         if (parts.isEmpty())
             throw new RuntimeException("Your input function is empty!\nPlease, insert correct input function!");
@@ -23,7 +23,9 @@ public class ParenthesisMultiplyAppender {
                 parts.add(++i, new Multiply());
                 continue;
             }
-            if ()
+            if (parts.get(i) instanceof OneParamOperation && i > 0 && parts.get(i - 1) instanceof InputNumber) {
+                parts.add(i++, new Multiply());
+            }
         }
     }
 }
